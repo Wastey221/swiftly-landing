@@ -66,13 +66,13 @@ export default function Home() {
     setWaitlistIsSubmitting(true);
 
     try {
-      const res = await fetch("https://sheetdb.io/api/v1/vfjb5l1ayaazc", {
+      const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          data: [{ email: next }],
+          email: next,
         }),
       });
 
